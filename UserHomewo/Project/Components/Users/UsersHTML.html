@@ -1,0 +1,18 @@
+<h2>Пользователи</h2>
+<div class="form-group col-lg-3">
+    <input  placeholder="Имя" class="form-control" name="name" [(ngModel)]="user.Name" #name="ngModel" pattern="[a-zA-Z]*" required/>
+    <div [hidden]="name.valid || name.untouched">
+            Введите имя
+    </div>
+    <input placeholder="Фамилия" class="form-control" name="surname" [(ngModel)]="user.Surname" #surname="ngModel" pattern="[a-zA-Z]*" required/>
+    <div [hidden]="surname.valid || surname.untouched">
+        Введите фамилию
+    </div>
+    <input placeholder="Отчество" class="form-control" name="patronymic" [(ngModel)]="user.Patronymic" #patronymic="ngModel" pattern="[a-zA-Z]*" required/>
+    <div [hidden]="patronymic.valid || patronymic.untouched">
+        Введите отчество
+    </div>
+</div>
+<button [disabled]="name.invalid || surname.invalid || patronymic.invalid" class="btn btn-primary" (click)="addUser()">Добавить</button>
+
+<usercard [UsersCarts]="Users"></usercard>

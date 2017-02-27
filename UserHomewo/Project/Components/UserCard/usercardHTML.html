@@ -1,0 +1,13 @@
+<div class="col-lg-12">
+    <h2>Карточка пользователя</h2>
+    <div *ngIf="UsersCarts.length == 0">
+        <h4>Нет пользователей</h4>
+    </div>
+    <div class="allpersons" *ngIf="UsersCarts">
+        <div class="person" *ngFor="let OneUser of UsersCarts">
+            <h4>{{OneUser.Name}}</h4>
+            <h4>{{OneUser.Surname}}</h4>
+            <h4>{{OneUser.Patronymic}}</h4>
+        </div>
+    </div>
+</div>
