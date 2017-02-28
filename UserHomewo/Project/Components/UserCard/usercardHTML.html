@@ -8,6 +8,8 @@
             <h4>{{OneUser.Name}}</h4>
             <h4>{{OneUser.Surname}}</h4>
             <h4>{{OneUser.Patronymic}}</h4>
+          <!--  <a [routerLink]="['user',OneUser.Id]">Информация о Пользователе</a> -->
+            <a (click)="ToUser(OneUser)">Информация о Пользователе</a>
         </div>
     </div>
 </div>
